@@ -13,3 +13,6 @@ After identified the **user story** then proceed to test the requirements:
 1. Write a failing test case.
 2. Code to pass the test.
 3. Refactor the code.
+
+
+*Code based on the LinkedIn Learning course [Programming Foundations: Test-Driven Development](https://www.linkedin.com/learning/programming-foundations-test-driven-development-3)

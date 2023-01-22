@@ -41,12 +41,12 @@ class HangmanTest {
         assertEquals(requestedLength, word.length());
     }
     @Test
-    void test_uniquenessOfFetchedWord() {
+    void testUniquenessOfFetchedWord() {
         Random random = new Random();
         int requestedLength = 0;
         Set<String> usedWordsSet = new HashSet<>();
         int round = 0;
-        String word = null;
+        String word;
         Hangman hangman = new Hangman();
 
         while (round < 100) {
@@ -54,9 +54,6 @@ class HangmanTest {
             word = hangman.fetchWord(requestedLength);
             round++;
             assertTrue(usedWordsSet.add(word));
-
-
-
         }
     }
 }
