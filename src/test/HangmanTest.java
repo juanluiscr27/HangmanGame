@@ -42,15 +42,15 @@ class HangmanTest {
 
     void testUniquenessOfFetchedWord() {
         Random random = new Random();
-        int requestedLength = 0;
+        int requestedLength;
+        String word;
         Set<String> usedWords = new HashSet<>();
-        String word = null;
         Hangman hangman = new Hangman();
 
         for (int round = 0; round < 100; round++) {
             requestedLength = random.nextInt(6) + 5;
             word = hangman.fetchWord(requestedLength);
-            assertEquals(requestedLength, word.length());
+            assertTrue(usedWords.add(word));
         }
     }
 }
