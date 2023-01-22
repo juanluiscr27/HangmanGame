@@ -9,4 +9,12 @@ public class Hangman {
         }
         return result;
     }
+
+    public String fetchWord() {
+        return "pizza";
+    }
+
+    public String fetchWord(int requestedLength) {
+        return "";
+    }
 }
