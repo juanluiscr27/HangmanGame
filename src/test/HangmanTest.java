@@ -4,13 +4,15 @@ import main.Hangman;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class HangmanTest {
     @Test
-    void test_alphabetCountInAWord(){
+    void testAlphabetCountInAWord(){
         String word = "pizza";
         char alphabet = 'a';
 
@@ -21,7 +23,7 @@ class HangmanTest {
     }
 
     @Test
-    void test_lengthOfFetchedWord() {
+    void testLengthOfFetchedWord() {
         Hangman hangman = new Hangman();
         String word = hangman.fetchWord();
 
@@ -29,12 +31,26 @@ class HangmanTest {
     }
 
     @Test
-    void test_lengthOfFetchedWordRandom() {
+    void testLengthOfFetchedWordRandom() {
         Random random = new Random();
         int requestedLength = random.nextInt(6) + 5;
         Hangman hangman = new Hangman();
         String word = hangman.fetchWord(requestedLength);
 
         assertEquals(requestedLength, word.length());
+    }
+
+    void testUniquenessOfFetchedWord() {
+        Random random = new Random();
+        int requestedLength = 0;
+        Set<String> usedWords = new HashSet<>();
+        String word = null;
+        Hangman hangman = new Hangman();
+
+        for (int round = 0; round < 100; round++) {
+            requestedLength = random.nextInt(6) + 5;
+            word = hangman.fetchWord(requestedLength);
+            assertEquals(requestedLength, word.length());
+        }
     }
 }
