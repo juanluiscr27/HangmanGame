@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HangmanTest {
     @Test
-    void test_alphabetCountInAward(){
+    void test_alphabetCountInAWord(){
         String word = "pizza";
         char alphabet = 'a';
 
