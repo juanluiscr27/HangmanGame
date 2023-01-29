@@ -4,9 +4,14 @@ With Test-Driven Design for Agility
 
 -----
 
-A formal test-driven development (TDD) process allows you to build testing into your daily routine. You can run 
-tests many times a day, getting instant feedback on the quality of your code. This aligns very well with the 
+A formal Test-Driven Development (TDD) process allows us to build testing into our daily routine. We can run 
+tests many times a day, getting instant feedback on the quality of our code. This aligns very well with the 
 iterative and incremental approach of the **Agile methodology**.
+
+The testing approach in TDD is only *unit testing*. That is, testing your code at the smallest unit level. Other 
+types of testing, such as *integration testing*, *system testing* or *functional testing*,, test your application 
+at a higher level and therefore not part of TDD 's scope.
+
 
 After identified the **user story** then proceed to test the requirements:
 

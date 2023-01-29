@@ -2,17 +2,16 @@ package test;
 
 import main.Hangman;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HangmanTest {
     @Test
-    void testAlphabetCountInAWord(){
+     void testAlphabetCountInAWord(){
         String word = "pizza";
         char alphabet = 'a';
 
@@ -21,7 +20,6 @@ class HangmanTest {
         int count = hangman.countAlphabet(word, alphabet);
         assertEquals(1, count);
     }
-
     @Test
     void testLengthOfFetchedWord() {
         Hangman hangman = new Hangman();
@@ -29,7 +27,6 @@ class HangmanTest {
 
         assertTrue(word.length() == 5);
     }
-
     @Test
     void testLengthOfFetchedWordRandom() {
         Random random = new Random();
